@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../widgets/TextFieldTelaLogin.dart';
+
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -28,18 +30,19 @@ class HomePage extends StatelessWidget {
             const SizedBox(
               height: 40,
             ),
-            const TextField(
-                decoration: InputDecoration(
-              border: OutlineInputBorder(),
-              hintText: 'Email...',
-            )),
+            const TextFieldTelaLogin(),
             const SizedBox(
               height: 40,
             ),
-            const TextField(
-              decoration: InputDecoration(
-                  border: OutlineInputBorder(), hintText: 'Senha...'),
-            )
+            TextFormField(
+              keyboardType: TextInputType.text,
+              obscureText: true,
+              decoration: const InputDecoration(
+                  filled: true,
+                  fillColor: Color.fromRGBO(217, 234, 249, 100),
+                  border: OutlineInputBorder(),
+                  hintText: 'Senha...'),
+            ),
           ],
         ),
       ),

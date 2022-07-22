@@ -1,7 +1,7 @@
 //crtrl space e ctrl .
 
 import 'package:flutter/material.dart';
-import 'package:flutter_hands_on/pages/home_page.dart';
+import 'package:flutter_hands_on/pages/home_page/home_page.dart';
 
 class AppWidget extends StatelessWidget {
   const AppWidget({Key? key}) : super(key: key);
