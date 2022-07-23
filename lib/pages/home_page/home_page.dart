@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hands_on/widgets/registerButton.dart';
 
 import '../../widgets/TextFieldTelaLogin.dart';
+import '../../widgets/loginButton.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -32,7 +34,7 @@ class HomePage extends StatelessWidget {
             ),
             const TextFieldTelaLogin(),
             const SizedBox(
-              height: 40,
+              height: 20,
             ),
             TextFormField(
               keyboardType: TextInputType.text,
@@ -43,6 +45,15 @@ class HomePage extends StatelessWidget {
                   border: OutlineInputBorder(),
                   hintText: 'Senha...'),
             ),
+            const SizedBox(
+              height: 40,
+            ),
+            Row(
+              children: [
+                loginButton(),
+                registerButton(),
+              ],
+            )
           ],
         ),
       ),
