@@ -50,8 +50,8 @@ class HomePage extends StatelessWidget {
             ),
             Row(
               children: [
-                loginButton(),
-                registerButton(),
+                const loginButton(),
+                const registerButton(),
               ],
             )
           ],
