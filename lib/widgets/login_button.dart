@@ -1,11 +1,10 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 // ignore: camel_case_types
-class loginButton extends StatelessWidget {
-  const loginButton({Key? key}) : super(key: key);
+class LoginButton extends StatelessWidget {
+  const LoginButton({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

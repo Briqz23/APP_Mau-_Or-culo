@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hands_on/widgets/registerButton.dart';
+import 'package:flutter_hands_on/widgets/register_button.dart';
 
-import '../../widgets/TextFieldTelaLogin.dart';
-import '../../widgets/loginButton.dart';
+import '../../widgets/text_filed_home_login_screen.dart';
+import '../../widgets/login_button.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -50,8 +50,8 @@ class HomePage extends StatelessWidget {
             ),
             Row(
               children: [
-                const loginButton(),
-                const registerButton(),
+                const LoginButton(),
+                const RegisterButton(),
               ],
             )
           ],

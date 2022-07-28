@@ -3,8 +3,8 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 // ignore: camel_case_types
-class registerButton extends StatelessWidget {
-  const registerButton({Key? key}) : super(key: key);
+class RegisterButton extends StatelessWidget {
+  const RegisterButton({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
