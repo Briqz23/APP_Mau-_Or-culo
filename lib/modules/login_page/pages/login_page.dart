@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hands_on/modules/homepage/widgets/register_button.dart';
-
-import '../widgets/text_filed_home_login_screen.dart';
-import '../widgets/login_button.dart';
+import 'package:flutter_hands_on/modules/login_page/widgets/generic_login_page_button.dart';
+import '../widgets/generic_text_field_login_screen.dart';
+import '../widgets/generic_login_page_button.dart';
+import 'main_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -11,16 +11,12 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 255, 255, 255),
-      appBar: AppBar(leading: const Icon(Icons.arrow_back)),
       body: Container(
         padding: const EdgeInsets.only(top: 0, left: 40, right: 40),
         child: ListView(
           children: <Widget>[
-            SizedBox(
-              width: 668,
-              height: 159,
-              child: Image.asset("/oraculo_txt.png"),
-            ),
+            AspectRatio(
+                aspectRatio: 1.2, child: Image.asset("/oraculo_txt.png")),
             const Text(
               'Estamos aqui para tirar todas as suas dúvidas',
               textAlign: TextAlign.center,
@@ -32,28 +28,44 @@ class HomePage extends StatelessWidget {
             const SizedBox(
               height: 40,
             ),
-            const TextFieldTelaLogin(),
+            const TextFieldTelaLogin(
+              stringHintText: 'Login...',
+              boolObscureText: false,
+            ),
             const SizedBox(
               height: 20,
             ),
-            TextFormField(
-              keyboardType: TextInputType.text,
-              obscureText: true,
-              decoration: const InputDecoration(
-                  filled: true,
-                  fillColor: Color.fromRGBO(217, 234, 249, 100),
-                  border: OutlineInputBorder(),
-                  hintText: 'Senha...'),
+            const TextFieldTelaLogin(
+              stringHintText: 'Senha...',
+              boolObscureText: true,
             ),
+            // TextFormField(
+            //   keyboardType: TextInputType.text,
+            //   obscureText: true,
+            //   decoration: const InputDecoration(
+            //       filled: true,
+            //       fillColor: Color.fromRGBO(217, 234, 249, 100),
+            //       border: OutlineInputBorder(),
+            //       hintText: 'Senha...'),
+            //),
             const SizedBox(
               height: 40,
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const LoginButton(),
-                const RegisterButton(),
+                LoginPageButton(
+                    title: 'Login',
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return MainPage();
+                      }));
+                    }),
+                const SizedBox(width: 16),
+                const LoginPageButton(title: 'Registro'),
               ],
-            )
+            ),
           ],
         ),
       ),

@@ -1,15 +1,22 @@
 import 'package:flutter/material.dart';
 
 class TextFieldTelaLogin extends StatelessWidget {
-  const TextFieldTelaLogin({Key? key}) : super(key: key);
+  final String stringHintText;
+  final bool boolObscureText;
+  const TextFieldTelaLogin({
+    Key? key,
+    required this.stringHintText,
+    required this.boolObscureText,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      obscureText: boolObscureText,
       keyboardType: TextInputType.emailAddress,
-      decoration: const InputDecoration(
-        border: OutlineInputBorder(),
-        hintText: 'Email...',
+      decoration: InputDecoration(
+        border: const OutlineInputBorder(),
+        hintText: stringHintText,
         //cores e fontes:
         filled: true,
         fillColor: Color.fromRGBO(217, 234, 249, 100),
