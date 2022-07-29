@@ -18,14 +18,12 @@ class RegisterButton extends StatelessWidget {
         ),
         child: Column(
           children: [
-            const Center(
-              child: Text('Register',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                      fontStyle: FontStyle.italic,
-                      fontSize: 20,
-                      color: Colors.white)),
-            ),
+            Text('Register',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    fontStyle: FontStyle.italic,
+                    fontSize: 20,
+                    color: Colors.white)),
           ],
         ),
       ),

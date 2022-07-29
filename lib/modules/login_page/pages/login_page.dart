@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hands_on/widgets/register_button.dart';
+import 'package:flutter_hands_on/modules/homepage/widgets/register_button.dart';
 
-import '../../widgets/text_filed_home_login_screen.dart';
-import '../../widgets/login_button.dart';
+import '../widgets/text_filed_home_login_screen.dart';
+import '../widgets/login_button.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
