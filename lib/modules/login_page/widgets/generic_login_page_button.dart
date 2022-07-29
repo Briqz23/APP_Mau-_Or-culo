@@ -13,7 +13,7 @@ class LoginPageButton extends StatelessWidget {
     return SizedBox(
       //SizedBox ideal pra definir altura e largura das coisas. O conteiner é melhor pra englobar filhos, definir decoração, etc.
       height: MediaQuery.of(context).size.height / 18,
-      width: MediaQuery.of(context).size.width / 5,
+      width: MediaQuery.of(context).size.width / 3,
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
@@ -23,7 +23,7 @@ class LoginPageButton extends StatelessWidget {
             )),
         child: Text(title,
             textAlign: TextAlign.center,
-            style: TextStyle(
+            style: const TextStyle(
                 fontStyle: FontStyle.italic,
                 fontSize: 20,
                 color: Colors.white)),

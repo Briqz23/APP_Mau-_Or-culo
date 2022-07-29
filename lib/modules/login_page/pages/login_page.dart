@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hands_on/modules/login_page/widgets/generic_login_page_button.dart';
 import '../widgets/generic_text_field_login_screen.dart';
 import '../widgets/generic_login_page_button.dart';
-import 'main_page.dart';
+import '../main_page/main_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -39,15 +39,6 @@ class HomePage extends StatelessWidget {
               stringHintText: 'Senha...',
               boolObscureText: true,
             ),
-            // TextFormField(
-            //   keyboardType: TextInputType.text,
-            //   obscureText: true,
-            //   decoration: const InputDecoration(
-            //       filled: true,
-            //       fillColor: Color.fromRGBO(217, 234, 249, 100),
-            //       border: OutlineInputBorder(),
-            //       hintText: 'Senha...'),
-            //),
             const SizedBox(
               height: 40,
             ),
@@ -59,13 +50,18 @@ class HomePage extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) {
-                        return MainPage();
+                        return const MainPage();
                       }));
                     }),
                 const SizedBox(width: 16),
                 const LoginPageButton(title: 'Registro'),
               ],
             ),
+            const SizedBox(height: 40),
+            const Center(child: LoginPageButton(title: 'Visitante')),
+            AspectRatio(
+                aspectRatio: 1.2,
+                child: Image.asset("/bottomIconsLoginScreen.png")),
           ],
         ),
       ),
