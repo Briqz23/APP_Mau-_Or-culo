@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 
 class MainPage extends StatelessWidget {
@@ -6,10 +8,17 @@ class MainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
       backgroundColor: const Color.fromARGB(255, 255, 255, 255),
-      appBar: AppBar(title: const Text('oi'), actions: <Widget>[
-        IconButton(onPressed: () {}, icon: Icon(Icons.add)),
-      ]),
+      appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          actions: <Widget>[
+            IconButton(
+                onPressed: () {}, icon: Icon(Icons.add), color: Colors.black),
+            IconButton(
+                onPressed: () {}, icon: Icon(Icons.add), color: Colors.black),
+          ]),
     );
   }
 }
