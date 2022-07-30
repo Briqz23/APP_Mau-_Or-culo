@@ -2,9 +2,17 @@ import 'dart:html';
 
 import 'package:flutter/material.dart';
 
-class MainPage extends StatelessWidget {
+import '../widgets/drawer_icon.dart';
+import '../widgets/profile_icon.dart';
+
+class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
 
+  @override
+  State<MainPage> createState() => _MainPageState();
+}
+
+class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,11 +21,11 @@ class MainPage extends StatelessWidget {
       appBar: AppBar(
           backgroundColor: Colors.transparent,
           elevation: 0,
+          leading: const BackButton(color: Colors.black),
           actions: <Widget>[
-            IconButton(
-                onPressed: () {}, icon: Icon(Icons.add), color: Colors.black),
-            IconButton(
-                onPressed: () {}, icon: Icon(Icons.add), color: Colors.black),
+            IconButtonProfileIcon(),
+            SizedBox(width: 8),
+            IconButtonDrawerIcon(),
           ]),
     );
   }
