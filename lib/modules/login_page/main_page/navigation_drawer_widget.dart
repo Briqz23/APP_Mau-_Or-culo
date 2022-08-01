@@ -16,9 +16,8 @@ class NavigationDrawerWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final name = 'Daniel Briquez';
     final email = '22.00251-0@maua.br';
-    final pfpImage = DecorationImage(
-      image: AssetImage('/profile_picture.png'),
-    );
+    final pfpImage = Image.asset('assets/profile_picture.png');
+
     return Drawer(
         child: Material(
             color: Colors.blue,
@@ -80,7 +79,7 @@ class NavigationDrawerWidget extends StatelessWidget {
   }
 
   buildHeader(
-          {required DecorationImage pfp_image,
+          {required Widget pfp_image,
           required String name,
           required String email}) =>
       InkWell(
@@ -89,6 +88,7 @@ class NavigationDrawerWidget extends StatelessWidget {
               child: Row(
                 children: [
                   CircleAvatar(
+                    child: pfp_image,
                     radius: 30,
                   ),
                   SizedBox(width: 20),

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../widgets/drawer_icon.dart';
 import '../widgets/profile_icon.dart';
 import 'lista_drawer_header.dart';
-import 'my_drawer_header.dart';
+
 import 'navigation_drawer_widget.dart';
 
 class MainPage extends StatefulWidget {
