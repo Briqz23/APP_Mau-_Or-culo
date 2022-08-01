@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
+import '../login_page/main_page/navigation_drawer_widget.dart';
+
 class MyProfile extends StatefulWidget {
   const MyProfile({Key? key}) : super(key: key);
 
@@ -12,11 +14,11 @@ class MyProfile extends StatefulWidget {
 class _MyProfileState extends State<MyProfile> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.amber,
-      child: Center(
-        child: Text("Perfil"),
-      ),
-    );
+    return Scaffold(
+        backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+        appBar: AppBar(
+          iconTheme: const IconThemeData(color: Colors.black),
+        ),
+        drawer: NavigationDrawerWidget());
   }
 }

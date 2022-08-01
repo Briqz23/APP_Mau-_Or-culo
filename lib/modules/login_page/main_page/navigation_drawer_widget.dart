@@ -14,12 +14,22 @@ class NavigationDrawerWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final name = 'Daniel Briquez';
+    final email = '22.00251-0@maua.br';
+    final pfpImage = DecorationImage(
+      image: AssetImage('/profile_picture.png'),
+    );
     return Drawer(
         child: Material(
             color: Colors.blue,
             child: ListView(
               padding: padding,
               children: <Widget>[
+                buildHeader(
+                  pfp_image: pfpImage,
+                  name: name,
+                  email: email,
+                ),
                 const SizedBox(height: 48),
                 buildMenuItem(
                   text: "Meu Perfil",
@@ -68,6 +78,36 @@ class NavigationDrawerWidget extends StatelessWidget {
       onTap: onClicked,
     );
   }
+
+  buildHeader(
+          {required DecorationImage pfp_image,
+          required String name,
+          required String email}) =>
+      InkWell(
+          child: Container(
+              padding: padding.add(EdgeInsets.symmetric(vertical: 40)),
+              child: Row(
+                children: [
+                  CircleAvatar(
+                    radius: 30,
+                  ),
+                  SizedBox(width: 20),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        name,
+                        style: TextStyle(fontSize: 20, color: Colors.white),
+                      ),
+                      const SizedBox(height: 4),
+                      Text(
+                        email,
+                        style: TextStyle(fontSize: 14, color: Colors.white),
+                      ),
+                    ],
+                  ),
+                ],
+              )));
 }
 
 void selectedItem(BuildContext context, int index) {
