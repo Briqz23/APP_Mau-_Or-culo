@@ -19,8 +19,8 @@ class TextFieldTelaLogin extends StatelessWidget {
         hintText: stringHintText,
         //cores e fontes:
         filled: true,
-        fillColor: Color.fromRGBO(217, 234, 249, 100),
-        labelStyle: TextStyle(
+        fillColor: const Color.fromRGBO(217, 234, 249, 100),
+        labelStyle: const TextStyle(
           color: Color.fromRGBO(188, 188, 188, 100),
           fontSize: 20,
         ),
