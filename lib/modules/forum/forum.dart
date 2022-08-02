@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
-import '../login_page/main_page/navigation_drawer_widget.dart';
+import '../login_page/widgets/navigation_drawer_widget.dart';
 
-class MainFeed extends StatefulWidget {
-  const MainFeed({Key? key}) : super(key: key);
+//fórum = main feed
+class Forum extends StatefulWidget {
+  const Forum({Key? key}) : super(key: key);
 
   @override
-  State<MainFeed> createState() => _MainFeedState();
+  State<Forum> createState() => _ForumState();
 }
 
-class _MainFeedState extends State<MainFeed> {
+class _ForumState extends State<Forum> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

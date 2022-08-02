@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hands_on/modules/login_page/widgets/generic_login_page_button.dart';
+import 'package:flutter_hands_on/modules/search_page/search_page.dart';
 import '../widgets/generic_text_field_login_screen.dart';
 import '../widgets/generic_login_page_button.dart';
-import '../main_page/main_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -50,8 +50,8 @@ class HomePage extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) {
-                        return const MainPage();
-                      }));
+                        return const SearchPage();
+                      }));  
                     }),
                 const SizedBox(width: 16),
                 const LoginPageButton(title: 'Registro'),

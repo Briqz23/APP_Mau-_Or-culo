@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 import '../login_page/widgets/navigation_drawer_widget.dart';
 
-class ErrorReport extends StatelessWidget {
-  const ErrorReport({Key? key}) : super(key: key);
+class PerguntasFrequentes extends StatefulWidget {
+  const PerguntasFrequentes({Key? key}) : super(key: key);
 
+  @override
+  State<PerguntasFrequentes> createState() => _PerguntasFrequentesState();
+}
+
+class _PerguntasFrequentesState extends State<PerguntasFrequentes> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

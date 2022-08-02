@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hands_on/modules/meu_perfil/meu_perfil.dart';
 
 import '../../error_report/error_report.dart';
-import '../../main_feed/main_feed.dart';
+import '../../search_page/search_page.dart';
+
 import '../../settings/settings.dart';
 import '../pages/login_page.dart';
 
@@ -118,7 +119,7 @@ void selectedItem(BuildContext context, int index) {
       break;
     case 1:
       Navigator.of(context)
-          .push(MaterialPageRoute(builder: (context) => const MainFeed()));
+          .push(MaterialPageRoute(builder: (context) => const SearchPage()));
       break;
     case 2:
       Navigator.of(context)

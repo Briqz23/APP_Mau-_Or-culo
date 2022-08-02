@@ -15,6 +15,7 @@ class TextFieldTelaLogin extends StatelessWidget {
       obscureText: boolObscureText,
       keyboardType: TextInputType.emailAddress,
       decoration: InputDecoration(
+        
         border: const OutlineInputBorder(),
         hintText: stringHintText,
         //cores e fontes:

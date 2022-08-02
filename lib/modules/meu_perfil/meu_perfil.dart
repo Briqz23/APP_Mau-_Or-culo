@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../login_page/main_page/navigation_drawer_widget.dart';
+import '../login_page/widgets/navigation_drawer_widget.dart';
 
 class MyProfile extends StatefulWidget {
   const MyProfile({Key? key}) : super(key: key);
